@@ -1,41 +1,56 @@
-// Work 25
-// Rest 5
-// Work 25
-// Rest 5
-// Work 25
-// Rest 5
-// Work 25
-// Rest 30
+//WORL CYCLE PHASES
+// 1 Work 25
+// 2 Rest 5
+// 3 Work 25
+// 4 Rest 5
+// 5 Work 25
+// 6 Rest 5
+// 7 Work 25
+// 8 Rest 30
 
 // Variable Value Definations
 
-let timeText = "25:00";
 // TIME IN SECONDS
 let time = 1500;
+let PHASE_TIME = 1500;
 let timerID = null;
+let phaseID = 1;
+let phaseTitle = "work";
 
 // DOM Element Definations
 const startButton = document.querySelector("#start");
 const pauseButton = document.querySelector("#pause");
+const stopButton = document.querySelector("#stop");
 
 const timeDisplay = document.querySelector(".time-display");
 
 // UI Functions
+
+const updateTimeDisplay = () => {
+  const minutes = Math.floor(time / 60);
+  const seconds = time % 60;
+
+  timeDisplay.innerText = `${minutes}:${seconds.toLocaleString("en-US", {
+    minimumIntegerDigits: 2,
+  })}`;
+};
+
 startButton.addEventListener("click", () => {
   timerID = setInterval(() => {
     time -= 1;
     // Zero Occurence
 
-    const minutes = Math.floor(time / 60);
-    const seconds = time % 60;
-
-    timeDisplay.innerText = `${minutes}:${seconds.toLocaleString("en-US", {
-      minimumIntegerDigits: 2,
-    })}`;
-    console.log(minutes, seconds);
-  }, 100);
+    updateTimeDisplay();
+  }, 1000);
 });
 
 pauseButton.addEventListener("click", () => {
   clearInterval(timerID);
+});
+
+stopButton.addEventListener("click", () => {
+  clearInterval(timerID);
+  time = PHASE_TIME;
+  //   timeDisplay.innerText = timeText;
+  updateTimeDisplay();
 });
