@@ -16,6 +16,7 @@ let timerID = null;
 
 // DOM Element Definations
 const startButton = document.querySelector("#start");
+const pauseButton = document.querySelector("#pause");
 
 const timeDisplay = document.querySelector(".time-display");
 
@@ -33,4 +34,8 @@ startButton.addEventListener("click", () => {
     })}`;
     console.log(minutes, seconds);
   }, 100);
+});
+
+pauseButton.addEventListener("click", () => {
+  clearInterval(timerID);
 });
