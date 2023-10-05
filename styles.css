@@ -20,6 +20,10 @@ body {
   height: 100vh;
 }
 
+.timer {
+  width: 50vw;
+}
+
 .time-display {
   font-family: sans-serif;
   text-align: center;
@@ -53,6 +57,11 @@ button {
 }
 
 button:hover {
+  background-color: #fff;
+  color: #111;
+}
+
+.active {
   background-color: #fff;
   color: #111;
 }
