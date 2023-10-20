@@ -1,5 +1,6 @@
 # Pomodoro App
 
+<<<<<<< HEAD
 _/ This App will be built with Jvascript and HTML /_
 
 You will have the ability to set a timer in to contineous intervals of 25 mins worktime and 5 mins breaktime.
@@ -11,3 +12,6 @@ I hope this helps increase your productivity!
 Incase of any bugs, Asimple reload should fix it
 
 Please checkout my github page for bug fixes at https://github.com/mico997/pomodoro_timer
+=======
+_/ This App will be built with Javascript and HTML /_
+>>>>>>> 7b5d6950ac2adebaa546428bad5117c41e777475
