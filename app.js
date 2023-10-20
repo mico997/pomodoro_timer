@@ -51,7 +51,7 @@ startButton.addEventListener("click", () => {
       updatePhaseDisplay();
     }
     updateTimeDisplay();
-  }, 10);
+  }, 1000);
 });
 
 pauseButton.addEventListener("click", () => {
@@ -103,7 +103,7 @@ const handlePhaseChange = () => {
 };
 
 const addActiveStyle = (buttonToUpdate) => {
-  const buttons = [startButton, pauseButton, startButton];
+  const buttons = [startButton, pauseButton, stopButton];
   buttons.forEach((button) => {
     button.classList.remove("active");
   });
